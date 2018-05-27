@@ -44,8 +44,8 @@ module.exports = {
   vuetify: {
     // Vuetify の設定はここに書く
     theme: {
-      primary: '#efebe9',
-      secondary: '#b0bec5',
+      primary: '#00B8D4',
+      secondary: '#263238',
       accent: '#8c9eff',
       error: '#b71c1c'
     }
