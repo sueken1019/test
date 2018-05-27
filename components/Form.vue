@@ -1,6 +1,6 @@
 <template>
   <div>
-    Formページ
+    フォームページ
     <HeadComp></HeadComp>
     <component :is="isComponent"></component>
     <button v-on:click="buttonAction">{{ button }}</button>
