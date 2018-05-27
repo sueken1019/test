@@ -34,5 +34,20 @@ module.exports = {
         })
       }
     }
+  },
+  
+  modules: [
+    // この行を追加して有効化
+    '@nuxtjs/vuetify'
+  ],
+
+  vuetify: {
+    // Vuetify の設定はここに書く
+    theme: {
+      primary: '#efebe9',
+      secondary: '#b0bec5',
+      accent: '#8c9eff',
+      error: '#b71c1c'
+    }
   }
 }
