@@ -17,6 +17,9 @@ export const getters = {
     },
     getComponent (state, getters, rootState) {
         return state.component[rootState.stepCount]
+    },
+    getStepCount (state, getters, rootState) {
+        return rootState.stepCount
     }
 }
 

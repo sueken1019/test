@@ -1,5 +1,5 @@
 <template>
-<p>{{ string }}</p>
+<p class="my-5">{{ string }}</p>
 </template>
 <script>
 import { createNamespacedHelpers } from 'vuex'

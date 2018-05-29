@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ title }}</h1>
+  <h1 class="display-2 mb-3">{{ title }}</h1>
 </template>
 <script>
 import { createNamespacedHelpers } from 'vuex'
