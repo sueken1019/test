@@ -1,8 +1,14 @@
 <template>
-<div>
-    <p class="error">{{ error }}</p>
-    <textarea v-model="impression"></textarea>
-</div>
+  <!-- <p class="subheading red--text">{{ error }}</p> -->
+  <v-form>
+    <v-text-field 
+      label="感想" 
+      class="my-5" 
+      v-model="impression" 
+      :rules="nameRules" 
+      required
+  ></v-text-field>
+  </v-form>
 </template>
 
 <script>
@@ -12,6 +18,13 @@ const { mapGetters } = createNamespacedHelpers('textarea')
 
 export default {
   name: 'textareaComp',
+  data: () => ({
+    valid: false,
+    name: '',
+    nameRules: [
+      v => !!v || '入力は必須です',
+    ]
+  }),
   computed: {
     impression: {
       get() {
@@ -27,10 +40,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.error {
-  color: red;
-}
-</style>
-

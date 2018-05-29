@@ -1,15 +1,17 @@
 <template>
-  <div>
-    Formページ
+  <v-content class="text-xs-center my-5">
     <HeadComp></HeadComp>
     <component :is="isComponent"></component>
-    <button v-on:click="buttonAction">{{ button }}</button>
-  </div>
+    <Thanks v-if="getStepCount == 2"></Thanks>
+    <v-btn color="primary" @click="buttonAction">{{ button }}</v-btn>
+  </v-content>
 </template>
 <script>
 import HeadComp from '~/components/modules/HeadComp.vue'
 import TextareaComp from '~/components/modules/TextareaComp.vue'
 import StringComp from '~/components/modules/StringComp.vue'
+import Thanks from '~/components/modules/Thanks.vue'
+
 import { createNamespacedHelpers } from 'vuex'
 const { mapActions, mapGetters } = createNamespacedHelpers('form')
 
@@ -23,13 +25,15 @@ export default {
   computed: {
     ...mapGetters({
       'button': 'getButton',
-      'isComponent': 'getComponent'
+      'isComponent': 'getComponent',
+      'getStepCount': 'getStepCount'
     }) 
   },
   components: {
     HeadComp,
     TextareaComp,
-    StringComp
+    StringComp,
+    Thanks
   }
 }
 </script>
